@@ -1,0 +1,107 @@
+body {
+  background: url("../assets/Logos/oceanFreight2.05cb75da7f3857d603b6.jpg") no-repeat center center/cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 420px; 
+}
+
+.card-title {
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 160px;   
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  justify-content: center;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #0088FF;
+  color: #fff !important;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 600;
+}
+
+
+.form-control {
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: #0088FF;
+  box-shadow: 0 0 5px rgba(0, 136, 255, 0.5);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary, .btn-success {
+  background-color: #0088FF;
+  border: none;
+}
+
+.btn-primary:hover, .btn-success:hover {
+  background-color: #006edc;
+}
+.footer-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.alert {
+  margin-top: 10px;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 100px; 
+  }
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 80px; 
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+}

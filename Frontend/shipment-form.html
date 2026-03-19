@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shipment Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+  <div class="container py-4">
+    <h3 id="formTitle">Add Shipment</h3>
+    <div class="mb-3">
+      <label class="form-label">Upload Shipment File (CSV, Excel, PDF, or DOCX)</label>
+      <input type="file" class="form-control" id="fileInput" accept=".csv,.xlsx,.xls,.pdf,.docx">
+    </div>
+
+    <form id="shipmentForm" class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label">Universal ID</label>
+        <input type="text" class="form-control" id="universalId" required>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Customer Name</label>
+        <input type="text" class="form-control" id="customerName">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Supplier</label>
+        <input type="text" class="form-control" id="supplier">
+      </div>
+      <div class="col-md-4"><label class="form-label">Commodity Type</label><input class="form-control"
+          id="commodityType"></div>
+      <div class="col-md-4"><label class="form-label">Representative Name</label><input class="form-control"
+          id="representativeName"></div>
+      <div class="col-md-4"><label class="form-label">Oper Num</label><input class="form-control" id="operNum"></div>
+      <div class="col-md-4"><label class="form-label">ACID</label><input class="form-control" id="acid"></div>
+      <div class="col-md-4"><label class="form-label">MBL</label><input class="form-control" id="mbl"></div>
+      <div class="col-md-4"><label class="form-label">BL</label><input class="form-control" id="bl"></div>
+      <div class="col-md-4"><label class="form-label">BL Type</label><input class="form-control" id="blType"></div>
+      <div class="col-md-4"><label class="form-label">Shipping Line</label><input class="form-control"
+          id="shippingLine"></div>
+      <div class="col-md-4"><label class="form-label">Containers / Packages</label><input class="form-control"
+          id="containersPackages"></div>
+      <div class="col-md-4"><label class="form-label">POD</label><input class="form-control" id="pod"></div>
+      <div class="col-md-4"><label class="form-label">ETA</label><input type="date" class="form-control" id="eta"></div>
+      <div class="col-md-4"><label class="form-label">ATA</label><input type="date" class="form-control" id="ata"></div>
+      <div class="col-md-4"><label class="form-label">Collected DO</label><input type="date" class="form-control"
+          id="collectedDO">
+      </div>
+      <div class="col-md-4"><label class="form-label">Documents Uploaded</label><input type="date" class="form-control"
+          id="documentsUploaded"></div>
+      <div class="col-md-4"><label class="form-label">Received Document</label><input type="date" class="form-control"
+          id="receivedDocument"></div>
+      <div class="col-md-4"><label class="form-label">Declaration No</label><input class="form-control"
+          id="declarationNo"></div>
+      <div class="col-md-4"><label class="form-label">Customs Registering</label><input type="date" class="form-control"
+          id="customsRegistering"></div>
+      <div class="col-md-4"><label class="form-label">Form 4 Issued</label><input type="date" class="form-control"
+          id="form4Issued">
+      </div>
+      <div class="col-md-4"><label class="form-label">Release Date</label><input type="date" class="form-control"
+          id="releaseDate"></div>
+      <div class="col-md-4"><label class="form-label">Status</label><input class="form-control" id="status"></div>
+      <div class="col-md-4"><label class="form-label">Last Update</label><input type="date" class="form-control"
+          id="lastUpdate"></div>
+      <div class="col-md-12"><label class="form-label">Remarks</label><textarea class="form-control"
+          id="remarks"></textarea></div>
+      <div class="col-md-12"><label class="form-label">Archive</label><input class="form-control" id="archive"></div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+  <!-- SheetJS for .xlsx / .xls / .csv -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+  <!-- pdf.js (make sure worker path matches) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script>
+    // point pdf.js worker to CDN (uses same version as pdf.min.js above)
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+  </script>
+
+  <!-- mammoth for DOCX -->
+  <script src="https://cdn.jsdelivr.net/npm/mammoth/mammoth.browser.min.js"></script>
+  <script src="js/shipment-form.js"></script>
+</body>
+
+</html>
